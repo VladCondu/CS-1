@@ -5,3 +5,5 @@ Most of them are based on replicating some of Linux CLI commands such as grep, c
 
 Also I have created a file system similar to the one in Linux that allows the user to create folders, files, inspect the files using 'cat'
 and all the other basic commands for a file system such as: ls, cd, pwd etc.
+
+All of the sources are written in C
