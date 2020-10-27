@@ -1,0 +1,55 @@
+Citire input:
+	Programul ruleaza intr-un loop while->EOF, folosind functia getline si separ cu strtok argumentele comenzii, salvandu-le dupa caz;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+WARNING Coding Style => exista un warning in checker care-mi spune ca pun degeaba " " dupa strtok desi eu folosesc spatiul ca si delimitator, odata cu '\n';
+Am declarat o lista generica pentru listele de Fisiere si Directoare componente ale unui director.							    
+WARNING Coding Style => Linie care depaseste 80 de caractere, desi in gedit si sublime nu gasesc asta, iar alta linie de caractere de peste 80 este un
+printf care nu poate fi micsorat. 																   
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 1 - create fs/delete fs :
+
+create	Initializez directorul root, ii atribui numele "\" si aloc ii memorie
+delete	Eliberez memoria numelui si a directorului root	
+	
+Task 2 - touch :
+
+Pentru aceasta functie am creat alte 2 functii auxiliare new_file si new_node (care foloseste si la mkdir) apoi le leg la lista de fisiere a directorului curent, comparand cu numele celor deja
+existente; Am pastrat de asemenea parintele pentru a putea face legaturile in lista.
+
+Task 3 - mkdir :
+
+Functioneaza pe acelasi principiu ca si touch si am introdus functia auxiliara new_dir.
+
+Task 4 - ls :
+
+Din directorul curent (salvat in current_dir, initial root) merg prin lista de fisiere si cea de directoare afisand numele lor;
+
+Task 5 - pwd :
+
+La acest task am creat o functie de tipul strcat care imi adauga la inceputul unui sir (nu la sfarsit) -> strfcat; si plecand de la directorul curent merg din parinte in parinte, atribuind directorului curent, directorul parinte al lui si salvand numele directorului in sir cu strfcat.
+La final afisez sirul rezultat;
+
+Task 6 - cd :
+
+Caut in lista de directoare a directorului curent, directorul ce trebuie cautat; In caz afirmativ, actualizez directorul curent, altfel afisez mesajul;
+Pentru cd .. mut directorul curent in directorul parinte.
+
+Task 7 - tree :
+
+Am creat o functie auxiliara ce functioneaza recursiv si una pentru identare, crescand variabila t (numarul de taburi pentru identare) de fiecare data cand trec recursiv intr-un director nou.
+
+Task 8 - rm : 
+
+Am creat o functie care in cazul in care fisierul care trebuie sters eliberez memoria fisierului, a continutului, a nodului, si mut pointerul care el la urmatorul din lista de fisiere a directorului curent. Daca nu este primul, merg din pointer urmator in pointer urmator pentru a pastra pozitia. Odata gasit trec la pasul anterior, eliberez memoria si fac legaturile dintre pointeri. Daca fisierul nu a fost gasit se afiseaza mesajul.
+
+Task 9 - rmdir;
+
+Algortimul pentru acest task este format din 2 parti: 1. Se cauta in lista directoarelor din directorul curent, directorul care trebuie sters. Daca nu se gaseste intoarce mesajul
+						      2. Daca se gaseste, atunci, sterg recursiv tot continutul acestuia, ii eliberez memoria si legatura catre el din lista de directoare.
+
+Task 10 (bonus) - find;
+
+Am creat o functie care cauta fisierele in mod recursiv prin directoarele directorului curent (prin lista de directoare) si afiseaza ceea ce gaseste. Recursivitatea se opreste cand depth trece de adancimea maxima sau cand lista de directoare este nula. 
+	
