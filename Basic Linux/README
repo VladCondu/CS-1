@@ -1,5 +1,5 @@
-Task 1 - grep -> timp aproximativ de implementare 3 ore. (gandire algoritm + scrierea codului)
-Metoda de implementare : algoritmul functioneaza prin cautarea sirului care trebuie cautat in fiecare linie a vectorului de siruri. 
+Task 1 - grep
+Implementation : algoritmul functioneaza prin cautarea sirului care trebuie cautat in fiecare linie a vectorului de siruri. 
 Sirul care trebuie cautat l-am colorat deja si pastrat intr-un sir special nefiind nevoia introducerii culorii de fiecare data cand se gaseste in linie sirul de cautat
 Deoarece am intampinat probleme in incercarea refolosirii functiei strstr sau strcpy/strcat pe vectorul initial de siuri, am construit unul nou in care inserez pe cel colorat si fac asta prin pastrarea pozitiei in linia initiala a inceputului sirului de cautat prin scaderea adreselor. Restul devine usor prin introducere a sirului colorat.
 
