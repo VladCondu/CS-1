@@ -1,0 +1,20 @@
+Task 1 - grep -> timp aproximativ de implementare 3 ore. (gandire algoritm + scrierea codului)
+Metoda de implementare : algoritmul functioneaza prin cautarea sirului care trebuie cautat in fiecare linie a vectorului de siruri. 
+Sirul care trebuie cautat l-am colorat deja si pastrat intr-un sir special nefiind nevoia introducerii culorii de fiecare data cand se gaseste in linie sirul de cautat
+Deoarece am intampinat probleme in incercarea refolosirii functiei strstr sau strcpy/strcat pe vectorul initial de siuri, am construit unul nou in care inserez pe cel colorat si fac asta prin pastrarea pozitiei in linia initiala a inceputului sirului de cautat prin scaderea adreselor. Restul devine usor prin introducere a sirului colorat.
+
+Task 2 - cut -> timp aproximativ de implementare 2 ore. (gandire algoritm + scrierea codului)
+Odata ce mi-am dat seama cum functioneaza toate alocarile in functii timpul de implementare a inceput sa scada. 
+Algoritmul merge in felul urmator: separ liniile textului cu ajutorul delimitatorilor si creez un vector un care pastrez fiecare camp creat. 
+Sirul cu fields il transform in int si il sortez pentru afisarea corecta
+Pentru fiecare linie a textului conform vectorului int de fields se afiseaza
+
+Task 3 - sort -> timp aproximativ de implementare 3 ore. (gandire + scriere cod)
+Salvez matricea notelor si pentru fiecare linie pastrez media intr-un vector de medii.
+De asemenea creez un vector de ordine pentru a nu sorta si realoca liniile matricei notelor.
+Se sorteaza mediile si aceleasi mutari se fac si pe vectorul de ordine astfel stim in ce ordine vom afisa notele si carei medii ii corespund.
+Am intampinat totusi cateva probleme la compararea mediilor rezultand intr-un timp mai indelungat de implementare. De exemplu (84.000/14 == 6.000) != (6.000 == 48.000/8).
+
+Task 4 - encrypt -> timp aprox de implementare 60 min (algoritm + cod)
+Dupa rezolvarea tuturor celorlalte taskuri, implementarea acestuia a fost usoara si rapida, intrucat am inteles cum sa structurez programul si sa aloc memorie.
+Algoritmul ia fiecare linie de text, separa in campuri delimitate de spatii si verifica daca este numar, verificand codul ASCII al fiecarui caracter. Apoi afiseaza sau cripteaza si afiseaza in functie de rezultatul functiei descrise anterior.
